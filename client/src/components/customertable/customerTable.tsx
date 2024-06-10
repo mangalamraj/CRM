@@ -113,10 +113,10 @@ const CustomerTable = () => {
               }
               className="bg-gray-800"
             />
-            <label className="font-normal">
-              {item.label}
+            <label className="font-normal flex items-center gap-2">
+              <div>{item.label}</div>
               <input
-                className="w-[100px] h-[20px]"
+                className="w-[100px] h-[40px] text-black"
                 type="number"
                 value={item.state}
                 onChange={(e) => {
