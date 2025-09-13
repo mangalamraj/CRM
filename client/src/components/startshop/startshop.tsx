@@ -43,7 +43,7 @@ const StartShop = () => {
         }),
       });
       if (response.ok) {
-        toast.success("✨Campaign Launched!", {
+        toast.success("✨Shop Launched!", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -54,6 +54,7 @@ const StartShop = () => {
           theme: "light",
           transition: Bounce,
         });
+        window.location.reload();
       }
     } catch (error: unknown) {
       console.log("Error", error);
@@ -72,7 +73,8 @@ const StartShop = () => {
               <DialogHeader>
                 <DialogTitle>Enter Details</DialogTitle>
                 <DialogDescription>
-                  Add name and details for your campaign, We will add it to your
+
+                  Add name and details for your Shop, We will add it to your
                   profile.
                 </DialogDescription>
               </DialogHeader>
@@ -117,6 +119,7 @@ const StartShop = () => {
             <Link href="/login" className="underline text-blue-500">
               Login
             </Link>
+
           </DialogContent>
         )}
       </Dialog>
