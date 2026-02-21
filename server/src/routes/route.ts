@@ -27,7 +27,7 @@ router.get("/getAllCampaignData", getCampaignData);
 async function connectRabbitMQ() {
   try {
     connection = await amqp.connect(
-      "amqps://jhizuqgc:UV6QGCAZ5d6weQVZulabvWfpYbC1ubet@puffin.rmq2.cloudamqp.com/jhizuqgc"
+      "amqps://pkeipqzy:xUDnrFi2seg26g4f15-qa5j-AhSIu_iu@chameleon.lmq.cloudamqp.com/pkeipqzy",
     );
     channel = await connection.createChannel();
     await channel.assertQueue("campaignQueue");
@@ -71,11 +71,9 @@ router.post("/sendCampaign", async (req, res) => {
   }
 
   try {
-    // Assert a fanout exchange for Pub/Sub
     const EXCHANGE = "campaignExchange";
     await channel.assertExchange(EXCHANGE, "fanout", { durable: false });
 
-    // Publish each customer message to the exchange
     for (const customer of customers) {
       const message = JSON.stringify(customer);
       await channel.publish(EXCHANGE, "", Buffer.from(message));
