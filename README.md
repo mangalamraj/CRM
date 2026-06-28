@@ -80,7 +80,7 @@ Now, the application should be running, and you can access it in your web browse
 - **Express.js**: A web application framework for Node.js.
 - **MongoDB Atlas**: A cloud-based NoSQL database for storing customer data.
 - **Firebase**: A platform for web and mobile development used here for authentication.
-- **RabbitMQ Cloud**: A cloud-based message broker for handling real-time updates and notifications.
+- **RabbitMQ Cloud(CloudAMPQ)**: A cloud-based message broker for handling real-time updates and notifications.
 
 ## License
 This project is made by Mangalam Raj
